@@ -1,7 +1,7 @@
 ## Letter
 
-### {LetterTitle}
-### {LetterDate}
+### {city}
+### {date1}
 
 - Installing
 - Getting started

@@ -1,4 +1,4 @@
-## Html 2 Pdf
+## Fake Letter
 
 Generate fake letters
 

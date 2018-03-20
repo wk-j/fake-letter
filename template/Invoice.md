@@ -2,5 +2,5 @@
 
 ### {CompanyName}
 
-Invoice {InvoiceNumber}
-Date    {InvoiceDate}
+Invoice {telehpone}
+Date    {date1}
