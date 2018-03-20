@@ -12,6 +12,7 @@ namespace HtmlToPdf {
         public string ZipCode { set; get; }
         public string City { set; get; }
         public string Phone { set; get; }
+        public string Acount { set; get; }
         public DateTime Date1 { set; get; }
         public DateTime Date2 { set; get; }
     }
@@ -59,6 +60,7 @@ namespace HtmlToPdf {
                 .RuleFor(x => x.Phone, f => f.Person.Phone)
                 .RuleFor(x => x.Date1, f => f.Date.Past(1))
                 .RuleFor(x => x.Date2, f => f.Date.Past(10))
+                .RuleFor(x => x.Acount, f => f.Finance.Account(8))
                 .RuleFor(x => x.City, f => f.Address.City());
 
             var datas = fake.Generate(count);
@@ -72,6 +74,7 @@ namespace HtmlToPdf {
                  .Replace("{zipCode}", item.ZipCode)
                  .Replace("{date1}", item.Date1.ToString("dd-MM-yyyy"))
                  .Replace("{data2}", item.Date2.ToString("dd-MM-yyyy"))
+                 .Replace("{account}", item.Acount)
                  .Replace("{phone}", item.Phone)
                  .Replace("{city}", item.City);
 

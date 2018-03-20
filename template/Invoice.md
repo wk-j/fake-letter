@@ -1,6 +1,7 @@
 ## Invoice
 
-### {CompanyName}
+### Company: {city}
 
-Invoice {telehpone}
-Date    {date1}
+Invoice No: {account}
+
+Date:    {date1}

@@ -1,7 +1,8 @@
 ## Letter
 
-### {city}
-### {date1}
+### Title: {city}
+
+### Date: {date1}
 
 - Installing
 - Getting started

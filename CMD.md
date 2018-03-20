@@ -14,7 +14,10 @@ rm /Users/wk/.dotnet/tools/wk-fake-letter
 cake -target=Pack
 dotnet install tool -g wk.FakeLetter --source ./publish
 
-wk-fake-letter template/Letter.md 10
+rm outputs/*.pdf
+
+wk-fake-letter template/Letter.md 3
+wk-fake-letter template/Invoice.md 3
 ```
 
 ## Test
