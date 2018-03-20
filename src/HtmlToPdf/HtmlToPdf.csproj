@@ -10,8 +10,10 @@
     <!-- Workaround only required for early previews of .NET Core tools. Can be removed when .NET Core 2.1 is released. -->
     <NETCorePlatformsImplicitPackageVersion>2.0.1</NETCorePlatformsImplicitPackageVersion>
   </PropertyGroup>
+  <ItemGroup></ItemGroup>
+  <ItemGroup></ItemGroup>
   <ItemGroup>
-    <PackageReference Include="DinkToPdf" Version="1.0.8" />
-    <!-- <PackageReference Include="Syncfusion.HtmlConverter.NETStandard20" Version="16.1200.0.24" /> -->
+    <PackageReference Include="Bogus" Version="22.0.5" />
+    <PackageReference Include="DynamicTables" Version="0.0.1" />
   </ItemGroup>
 </Project>
