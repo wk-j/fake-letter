@@ -10,9 +10,11 @@ brew cask install mactex
 ## Build
 
 ```bash
-rm /Users/wk/.dotnet/tools/wk-avatar
+rm /Users/wk/.dotnet/tools/wk-fake-letter
 cake -target=Pack
-dotnet install tool -g wk.Avatar --source ./publish
+dotnet install tool -g wk.FakeLetter --source ./publish
+
+wk-fake-letter template/Letter.md 10
 ```
 
 ## Test

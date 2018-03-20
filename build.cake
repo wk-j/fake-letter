@@ -1,6 +1,6 @@
 Task("Pack").Does(() => {
     CleanDirectory("publish");
-    DotNetCorePack("src/HtmlToPdf", new DotNetCorePackSettings {
+    DotNetCorePack("src/FakeLetter", new DotNetCorePackSettings {
         OutputDirectory = "publish"
     });
 });

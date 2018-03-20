@@ -1,10 +1,10 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <ToolCommandName>wk-html2pdf</ToolCommandName>
+    <ToolCommandName>wk-fake-letter</ToolCommandName>
     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
     <PackAsTool>true</PackAsTool>
     <OutputType>Exe</OutputType>
-    <PackageId>wk.HtmlToPdf</PackageId>
+    <PackageId>wk.FakeLetter</PackageId>
     <Version>0.1.0</Version>
     <TargetFramework>netcoreapp2.0</TargetFramework>
     <!-- Workaround only required for early previews of .NET Core tools. Can be removed when .NET Core 2.1 is released. -->
@@ -15,5 +15,6 @@
   <ItemGroup>
     <PackageReference Include="Bogus" Version="22.0.5" />
     <PackageReference Include="DynamicTables" Version="0.0.1" />
+    <PackageReference Include="wk.StartProcess" Version="18.2.2" />
   </ItemGroup>
 </Project>
