@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <ToolCommandName>wk-html2pdf</ToolCommandName>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    <PackAsTool>true</PackAsTool>
+    <OutputType>Exe</OutputType>
+    <PackageId>wk.HtmlToPdf</PackageId>
+    <Version>0.1.0</Version>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <!-- Workaround only required for early previews of .NET Core tools. Can be removed when .NET Core 2.1 is released. -->
+    <NETCorePlatformsImplicitPackageVersion>2.0.1</NETCorePlatformsImplicitPackageVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="DinkToPdf" Version="1.0.8" />
+    <!-- <PackageReference Include="Syncfusion.HtmlConverter.NETStandard20" Version="16.1200.0.24" /> -->
+  </ItemGroup>
+</Project>
