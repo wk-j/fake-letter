@@ -1,15 +1,15 @@
 ## Fake Letter
 
-Generate fake letters (.pdf) from markdown (.md)
+Generate fake letters (.pdf) from markdown template (.md)
 
 ## Available variables
 
-- User
+- UserName
 - Email
 - ZipCode
 - City
 - Phone
-- Acount
+- Account
 - Date1
 - Date2
 
