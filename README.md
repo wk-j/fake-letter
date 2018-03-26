@@ -1,6 +1,17 @@
 ## Fake Letter
 
-Generate fake letters
+Generate fake letters (.pdf) from markdown (.md)
+
+## Available variables
+
+- User
+- Email
+- ZipCode
+- City
+- Phone
+- Acount
+- Date1
+- Date2
 
 ## Installation
 
