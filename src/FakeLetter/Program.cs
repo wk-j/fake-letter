@@ -7,7 +7,7 @@ using PS = StartProcess.Processor;
 
 namespace HtmlToPdf {
     class Data {
-        public string User { set; get; }
+        public string UserName { set; get; }
         public string Email { set; get; }
         public string ZipCode { set; get; }
         public string City { set; get; }
@@ -54,7 +54,7 @@ namespace HtmlToPdf {
 
             var outputDir = CreateOutputDir();
             var fake = new Faker<Data>()
-                .RuleFor(x => x.User, f => f.Person.UserName)
+                .RuleFor(x => x.UserName, f => f.Person.UserName)
                 .RuleFor(x => x.Email, f => f.Person.Email)
                 .RuleFor(x => x.ZipCode, f => f.Address.ZipCode(null))
                 .RuleFor(x => x.Phone, f => f.Person.Phone)
@@ -69,7 +69,7 @@ namespace HtmlToPdf {
             var md = File.ReadAllText(template);
             var newMds = datas.Select((item, i) => {
                 var newMd =
-                 md.Replace("{userName}", item.User)
+                 md.Replace("{userName}", item.UserName)
                  .Replace("{email}", item.Email)
                  .Replace("{zipCode}", item.ZipCode)
                  .Replace("{date1}", item.Date1.ToString("dd-MM-yyyy"))
@@ -78,8 +78,8 @@ namespace HtmlToPdf {
                  .Replace("{phone}", item.Phone)
                  .Replace("{city}", item.City);
 
-                var fileName = $"{(i + 1).ToString("D2")}-{templateName}";
-                var outputFile = Path.Combine(outputDir, Path.ChangeExtension(fileName, ".pdf"));
+                var fileName = $"{Path.GetFileNameWithoutExtension(templateName)}-{(i + 1).ToString("D2")}" + ".pdf";
+                var outputFile = Path.Combine(outputDir, fileName);
                 ProcessMd(outputFile, newMd);
                 return new { Output = outputFile };
             });

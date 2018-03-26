@@ -1,3 +1,7 @@
+#addin "wk.StartProcess"
+
+using PS = StartProcess.Processor;
+
 Task("Pack").Does(() => {
     CleanDirectory("publish");
     DotNetCorePack("src/FakeLetter", new DotNetCorePackSettings {
@@ -16,6 +20,13 @@ Task("Publish-Nuget")
             ApiKey = npi
         });
 });
+
+Task("Install")
+    .IsDependentOn("Pack")
+    .Does(() => {
+        PS.StartProcess("rm /Users/wk/.dotnet/tools/wk-fake-letter");
+        PS.StartProcess("dotnet install tool -g wk.FakeLetter --source ./publish");
+    });
 
 var target = Argument("target", "Pack");
 RunTarget(target);
